@@ -1,0 +1,9 @@
+<?php 
+    $tl2='';
+    if(isset($_GET['tl2']))
+        $tl2=$_GET['tl2'];
+    if($tl2=='ldh'||$tl2=='ctt')
+        include_once('Modules/timkiem/tkdh.php');
+    else
+        include_once('Modules/timkiem/tknh.php');
+?>
