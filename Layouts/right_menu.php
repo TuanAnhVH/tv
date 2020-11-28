@@ -12,7 +12,8 @@
           foreach($lst as $row)
           { 
       ?>
-            <li><a href="#"><?php echo $row['tennhanhieu'] ?></a></li>
+            <li><a href="<?php echo $nhanhieu->h->get_url('tv/?m=common&a=home&tl=nhanhieu&id='.$row['manhanhieu']) ?>">
+            <?php echo $row['tennhanhieu'] ?></a></li>
       <?php }?>
     </ul>
 </div>

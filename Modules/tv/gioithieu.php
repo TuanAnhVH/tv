@@ -19,7 +19,7 @@
         </div>
         <div class="col_1_of_3 span_1_of_3 about-centre">
           <h3>Hướng Dẫn Mua Hàng</h3>
-          <a href=""><img src="public/images/user/bg/slide4.png" alt="logo 2"></a>
+          <a href=""><img src="public/images/user/bg/tivi8.jpg" alt="logo 2"></a>
           <h5> Có 2 cách để mua hàng đơn giản tại website</h5>
           <p>Cách 1: Gọi điện trực tiếp đến tổng đài mua hàng 1800 6836 (miễn phí) tất cả các ngày trong tuần (24/24) </p>
           <p>Cách 2: Đặt mua hàng trên website thegioidienmayonline.com</p>

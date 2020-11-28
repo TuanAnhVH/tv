@@ -139,13 +139,13 @@ class sanpham extends Database
          return $this->db_get_list($sql);
      }
 
-     function db_get_list_sanpham_paging_user_by_nhanhieu(&$paging_html,$id,$tl)
+     function db_get_list_sanpham_paging_user_by_nhanhieu(&$paging_html,$id)
      {
-        $link = $this->h->get_url("tv/?m=common&a=home&tl=$tl&id=$id&page={page}");
+        $link = $this->h->get_url("tv/?m=common&a=home&tl=nhanhieu&id=$id&page={page}");
         $sql = "select * from v_sanpham_nhanhieu where manhanhieu=$id";
         $total_records = $this->db_num_rows($sql);
         $current_page = $this->h->input_get('page');
-        $limit = 12;
+        $limit = 8;
         
         $paging = $this->h->paging($link,$total_records,$current_page,$limit);
         $sql = "select * from v_sanpham_nhanhieu where manhanhieu=$id limit {$paging['start']},{$paging['limit']}";
