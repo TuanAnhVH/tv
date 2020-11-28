@@ -89,15 +89,16 @@ class sanpham extends Database
      return $this->db_get_list($sql);
    }
    
-   // function db_get_list_sanpham_by_nhanhieu($id)
-   // {
-   //   $sql = "select * from sanpham where nhanhieu = '$id' limit 0,6";
-   //   return $this->db_get_list($sql);
-   // }
 
    function db_get_list_allsanpham()
    {
      $sql = "select * from v_sanpham_nhanhieu";
+     return $this->db_get_list($sql);
+   }
+
+   function db_get_list_sanphammoi()
+   {
+     $sql = "select * from v_sanpham_nhanhieu order by ngaytao desc limit 0,8";
      return $this->db_get_list($sql);
    }
 
@@ -111,13 +112,13 @@ class sanpham extends Database
    function db_get_list_sanpham_paging(&$paging_html)
      {
          $link = $this->h->get_url("tv/admin/?tl=lnh&page={page}");
-         $sql = "select * from v_sanpham_nhanhieu";
+         $sql = "select * from v_sanpham_nhanhieu order by masanpham";
          $total_records = $this->db_num_rows($sql);
          $current_page = $this->h->input_get('page');
          $limit = 12;
          
          $paging = $this->h->paging($link,$total_records,$current_page,$limit);
-         $sql = "select * from v_sanpham_nhanhieu limit {$paging['start']},{$paging['limit']}";
+         $sql = "select * from v_sanpham_nhanhieu order by masanpham limit {$paging['start']},{$paging['limit']}";
          $paging_html = $paging['html'];
          return $this->db_get_list($sql);
      }
