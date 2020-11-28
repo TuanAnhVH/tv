@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>TV Shop</title>
+    <?php include_once("Layouts/style.php"); ?>
     
 </head>
 <body>

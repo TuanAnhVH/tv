@@ -2,10 +2,10 @@
 <div class="wrap">
 	<div class="content">
 		<div class="section group">
-			<div class="col span_1_of_3">
-				<div class="col-md-6 offset-3">
+			<div>
+				<div class="col-md-6 offset-3 mt-3">
 				  <div class="contact-form">
-				  	<h2 class="text-primary">Gửi phản hồi</h2>
+				  	<h2 class="text-primary">Ý kiến phản hồi</h2>
             <form>
               <div>
                 <span><label class="text-primary">Tên</label></span>
@@ -24,7 +24,7 @@
                 <span><textarea class="form-control"></textarea></span>
               </div>
               <div>
-                <span><input type="submit" value="Gửi"></span>
+                <span><input type="submit" value="Gửi" class="btn btn-primary"></span>
               </div>
             </form>
           </div>

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="Public/Css/jquery-ui.min.css">
 <link rel="stylesheet" href="Public/Css/animate.css">
 <link rel="stylesheet" href="Public/Css/icons.css"> 
-<link rel="stylesheet" type="text/css" href="public/css/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="public/css/style.css" /> -->
 <link rel="stylesheet" href="Public/Css/bootstrap-4.3.1.min.css"> 
 
 <script src="Public/Js/jquery-3.4.1.min.js"></script>

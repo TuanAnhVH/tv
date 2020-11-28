@@ -12,10 +12,7 @@
 		<div class="clear"> </div>
 		<div class="header-top-nav">
 			<ul>
-				<li><a href="">Đăng ký</a></li>
-				<li><a href="">Đăng nhập</a></li>
-				<li><a href="">Tài khoản</a></li>
-				<li><a href="">Giỏ hàng: </a></li>&nbsp;0 sản phẩm
+				<li><a href="" class="text-danger">Giỏ hàng: </a></li>&nbsp;0 sản phẩm
 			</ul>
 		</div>
 		<div class="clear"> </div>
@@ -30,7 +27,7 @@
 		<div class="top-nav">
 			<ul>
 				<li><a href="#">Trang chủ</a></li>
-				<li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=gioithieu'); ?>">Sản phẩm</a></li>
+				<li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=tatca') ?>">Sản phẩm</a></li>
 				<li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=gioithieu'); ?>">Giới thiệu</a></li>
 				<li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=phanhoi'); ?>">Phản hồi</a></li>
 			</ul>
