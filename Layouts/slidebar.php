@@ -6,13 +6,13 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active text-center">
-      <img src="public/images/user/bg/slide2.png" alt="logo 1">
+      <img src="public/images/user/bg/slide3.png" alt="logo 1">
     </div>
     <div class="carousel-item text-center">
-      <img src="public/images/user/bg/slide4.png" alt="logo 2">
+      <img src="public/images/user/bg/slide1.png" alt="logo 2">
     </div>
     <div class="carousel-item text-center">
-      <img src="public/images/user/bg/slide3.png" alt="logo 3">
+      <img src="public/images/user/bg/slide2.png" alt="logo 3">
     </div>
   </div>
   <a class="carousel-control-prev" href="#demo" data-slide="prev">

@@ -160,7 +160,7 @@ body{
 	background:#FCA805;
 }
 .theree{
-	background:#2E2E2E;
+	background:green;
 }
 .images_1_of_3  img {
 	max-width:100%;

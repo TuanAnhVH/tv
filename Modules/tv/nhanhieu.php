@@ -1,15 +1,20 @@
 <?php
+  $id=0;
+  if(isset($_GET['id']))
+    $id=$_GET['id'];
+  $nhanhieu = new nhanhieu;
+  $nhanhieu= $nhanhieu->db_get_list_nhanhieu_by_id($id);
   $new = new sanpham();
-  $lst = $new->db_get_list_sanphammoi();
+
+  $paging_html = "";
+  $lst = $new->db_get_list_sanpham_paging_user_by_nhanhieu($paging_html,$id);
+  $lst_all= $new->db_get_list_sanpham_by_nhanhieu($id)
 ?>
 
-<?php include_once("Layouts/slidebar.php"); ?>
-<div class="clear"></div>
 <div class="wrap">
   <div class="content">
-    <?php include_once("Layouts/top.php"); ?>
     <div class="content-grids">
-      <h4 class="text-danger mt-2">Hàng mới về</h4>
+      <h4 class="text-danger mt-2"><?php echo $nhanhieu['tennhanhieu'] ?></h4>
       <div class="row">
         <?php if(!empty($lst))
           foreach($lst as $row)
@@ -25,7 +30,20 @@
               </p>
             </div>
           </div>
-        <?php }?>
+        <?php }
+        else
+          {
+        ?>
+          <h4 class ="text-primary">Nhãn hiệu này chưa có sản phẩm nào!!</h4>
+        <?php
+          }
+        ?>
+      </div>
+      <div class="mt-2 ml-4">
+        <?php 
+          if(!empty($lst_all))
+            if(count($lst_all)>8) echo $paging_html; 
+        ?>
       </div>
     </div>
     <?php include_once("Layouts/right_menu.php"); ?>
