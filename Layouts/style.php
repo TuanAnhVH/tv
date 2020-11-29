@@ -763,7 +763,8 @@ body{
 }
 .detalis-image{
 	float: left;
-    width: 20%;
+    width: 30%;
+	margin-left:2%;
 }
 .brand-value,.details-categories{
 	float:left;
@@ -806,7 +807,7 @@ body{
 }
 .brand-value{
 	border-bottom:1px solid #e5e5e5;
-	width:50%;
+	width:70%;
 	padding-bottom:10px;
 }
 .brand-value h3{
@@ -1120,7 +1121,7 @@ body{
 }
 .detalis-image-details {
 	float: right;
-	width: 80%;
+	width: 65%;
 }
 .span_2_of_3{
 	width: 64%;

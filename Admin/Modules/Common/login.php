@@ -65,11 +65,10 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="row d-flex justify-content-center">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-5 mb-5">
-              <div class="card border " style="background-color:purple">
+              <div class="card border " style="background-color:blue">
                 <div class="card-body text-center">
                   <span class="login100-form-logo"> 
                   </span>
-
                   <h2 class=" login100-form-title p-b-34 p-t-27">Đăng nhập hệ thống</h2>
                   <div class="container mt-3">
                      <form id="form-login" action="" method="post">
@@ -100,9 +99,7 @@
             </div>
           </div>
       </div>
-      
-   </div>
-   
+   </div> 
 </div>
 </body>
 

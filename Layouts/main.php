@@ -1,12 +1,8 @@
-
-
-
 <!-- Main -->
 	  <?php 
 	$tl = "";
 	if(isset($search))
 		include_once("Modules/tv/timkiem.php");
-	 
 	else if (isset($_REQUEST["tl"]))
 	{
 		$page=$_REQUEST["tl"];			

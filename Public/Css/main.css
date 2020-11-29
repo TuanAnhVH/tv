@@ -11,13 +11,13 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background-image: url('../Images/bg/logo.png');
+    background-image: url('../Images/admin/bg/login1.png');
     background-size: 100% 100%;
     margin: 0 auto;
   }
   .contanner_background
   {
-    background-image: url('../Images/bg/n5.jpg');
+    background-image: url('../Images/admin/bg/n5.jpg');
     background-size: 100% 100%;
    
 }
