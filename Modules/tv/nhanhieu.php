@@ -22,7 +22,11 @@
         ?>
           <div class="grid_1_of_4 images_1_of_4 products-info">
             <img src="<?php echo "uploads/".$row['avatar']?>" alt="photo" width="200" height="130">
-            <h3><a href="#"><?php echo $row['tensanpham'] ?></a></h3>
+            <h3>
+              <a href="<?php echo $new->h->get_url('/tv/?m=common&a=home&tl=chitiet&ma='.$row['masanpham']).'&n='.$row['manhanhieu'];?>">
+                <?php echo $row['tensanpham'] ?>
+              </a>
+            </h3>
             <p class="text-danger"><?php echo " ". saves::change_price($row['giatien'])." vnd"?></p>
             <div class="pl-3 pr-3">
               <p>
