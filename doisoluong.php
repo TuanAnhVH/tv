@@ -8,24 +8,14 @@
   $sl=1;
   if(isset($_POST['id']))
     $id=$_POST['id'];
+  if(isset($_POST['sl']))
+    $sl=$_POST['sl'];
 
   $sp= new sanpham();
   $item= $sp->db_get_sanpham_by_id($id);
-  $ten=$item['tensanpham'];
   $dongia=$item['giatien'];
 
   $cart= $sp->r->session_get('cart');
-  if(empty($cart))
-  {
-    $sp->r->session_set("cart",[$id=>array($id,$sl,$dongia)]);
-  }  
-    else
-    {
-      if(isset($cart[$id]))
-        $sl= $cart[$id][1]+1;
-
-      $cart[$id]=array($id,$sl,$dongia);
-      $sp->r->session_set("cart",$cart);
-    }
-  echo "Đã thêm 1 sản phẩm ".$ten ." vào giỏ hàng!";
+  $cart[$id]=array($id,$sl,$dongia);
+  $sp->r->session_set("cart",$cart);
 ?>
