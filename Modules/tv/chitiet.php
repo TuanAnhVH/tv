@@ -30,7 +30,7 @@
         <div class="left-value-details">
           <p><b>Giá:</b><span class="text-danger"><?php echo " ". saves::change_price($sp['giatien'])." vnd"?></span></p>
           <p><b>Nhãn hiệu:</b> <?php echo $nh['tennhanhieu'] ?></p>
-          <a href="#" class="btn btn-primary">Thêm vào giỏ</a>
+            <button class="btn btn-primary btnmua" data-id="<?php echo $sp['masanpham']?>">Thêm vào giỏ</button>
         </div>
       </div>   
     </div>
@@ -50,3 +50,19 @@
   <?php include_once("Layouts/right_menu.php"); ?>
   <div class="clear"></div>
 </div>
+
+<script>
+  $('.btnmua').click(function(){
+    var id= $(this).attr("data-id");
+    $.ajax({
+      method: "POST",
+    url: "dathang.php",
+    data:{
+          "id":id,
+        } ,
+    success : function(response){
+          alert(response);
+        },       
+    })
+  });
+</script>

@@ -1,25 +1,25 @@
 <?php
 
- $nh= new nuochoa();
- $ten="";
- $gia=0;
- $soluong=0;
- $thanhtien=0;
- $tongcong=0;
- $id="";
+  $nh= new sanpham();
+  $ten="";
+  $gia=0;
+  $soluong=0;
+  $thanhtien=0;
+  $tongcong=0;
+  $id="";
 
- if(!isset($_GET['id']))
-   $nh->r->session_delete('cart');
-else
-{
- $cart= $nh->r->session_get('cart');
- $id=$_GET['id'];
- unset($cart[$id]);
- $nh->r->session_delete('cart');
- $nh->r->session_set("cart",$cart);
-}
+  if(!isset($_GET['id']))
+    $nh->r->session_delete('cart');
+  else
+  {
+    $cart= $nh->r->session_get('cart');
+    $id=$_GET['id'];
+    unset($cart[$id]);
+    $nh->r->session_delete('cart');
+    $nh->r->session_set("cart",$cart);
+  }
 
-$cart= $nh->r->session_get('cart');
+  $cart= $nh->r->session_get('cart');
 ?>
 
 <div id="content">
@@ -44,8 +44,8 @@ $cart= $nh->r->session_get('cart');
      if(!empty($cart))
           foreach($cart as $row)
           {   
-            $item= $nh->db_get_nuochoa_by_id($row[0]);
-            $ten=$item['tennuochoa'];
+            $item= $nh->db_get_sanpham_by_id($row[0]);
+            $ten=$item['tensanpham'];
             $avatar=$item['avatar'];
             $soluong=$row[1];
             $gia=$item['giatien'];
