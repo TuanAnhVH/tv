@@ -13,7 +13,8 @@
 <link rel="stylesheet" href="../Public/Css/icons.css">
 <link rel="stylesheet" href="../Public/Css/menu.css">
 <link rel="stylesheet" href="../Public/Css/animate.css">
-<link rel="stylesheet" href="../Public/Css/main.css">
+<?php include_once("Layout/login_style.php"); ?>
+<!-- <link rel="stylesheet" href="../Public/Css/main.css"> -->
 
 <script src="../Public/Js/bootstrap-4.3.1.js"></script>
 <script src="../Public/Js/jquery.validate.js"></script>
@@ -64,7 +65,7 @@
       
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="row d-flex justify-content-center">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-5 mb-5">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 mt-4 mb-5">
               <div class="card border " style="background-color:blue">
                 <div class="card-body text-center">
                   <span class="login100-form-logo"> 

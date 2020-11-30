@@ -61,7 +61,7 @@
                       </div>
                       
                         <div>
-                          <img src="asset/img/bg2.jpg" alt="" style="height:530px;width:630px;margin:20px 30px 30px 30px">
+                          <img src="asset/img/4.png" alt="" style="height:530px;width:630px;margin:20px 30px 30px 30px">
                         </div>  
                     </div>
                 </div> 
