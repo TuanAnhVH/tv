@@ -22,7 +22,7 @@
         <p class="text-danger"><?php echo " ". saves::change_price($row['giatien'])." vnd"?></p>
         <div class="pl-3 pr-3">
           <p>
-            <a href="" class="btn btn-primary">Thêm vào giỏ</a>
+            <button class="btn btn-primary btnmua" data-id="<?php echo $row['masanpham']?>">Thêm vào giỏ</button>
           </p>
         </div>
       </div>
