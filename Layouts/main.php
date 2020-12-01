@@ -1,5 +1,5 @@
 <!-- Main -->
-	  <?php 
+<?php 
 	$tl = "";
 	if(isset($search))
 		include_once("Modules/tv/timkiem.php");
@@ -9,49 +9,45 @@
 		switch($page)
 		{
 			case "home":
-				
-			    include_once("Modules/tv/home.php");
-				break;
-			case "tatca":
-				
+			  include_once("Modules/tv/home.php");
+        break;
+        
+			case "tatca":	
 				include_once("Modules/tv/tatca.php");
-				break;
+        break;
+        
 			case "nhanhieu":
-				
 				include_once("Modules/tv/nhanhieu.php");
-				break;
-			case "timkiem":
-				
-				include_once("Modules/tv/timkiem.php");
-				break;
+        break;
+        
 			case "chitiet":
-				
 				include_once("Modules/tv/chitiet.php");
-				break;
-			case "gioithieu":
-				
+        break;
+        
+			case "gioithieu":		
 				include_once("Modules/tv/gioithieu.php");
-				break;
-			case "phanhoi":
-				
+        break;
+        
+			case "phanhoi":	
 					include_once("Modules/tv/phanhoi.php");
-					break;
+          break;
+          
 			case "giohang":
-				
 					include_once("Modules/tv/giohang.php");
-						break;
+            break;
+            
 			case "deletegio":
-				
 				include_once("Modules/tv/deletegio.php");
-					break;
-			case "thanhtoan":
-				
+          break;
+          
+			case "thanhtoan":	
 						include_once("Modules/tv/thanhtoan.php");
-							break;
-			case "thanhtoantc":
-				
+              break;
+              
+			case "thanhtoantc":		
 						include_once("Modules/tv/thanhtoantc.php");
-							break;
+              break;
+              
 			default:
 				include_once("Modules/tv/home.php");
 				break;

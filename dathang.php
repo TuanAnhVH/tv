@@ -18,6 +18,7 @@
   if(empty($cart))
   {
     $sp->r->session_set("cart",[$id=>array($id,$sl,$dongia)]);
+    $cart= $sp->r->session_get('cart');
   }  
     else
     {
@@ -27,5 +28,5 @@
       $cart[$id]=array($id,$sl,$dongia);
       $sp->r->session_set("cart",$cart);
     }
-  echo "Đã thêm 1 sản phẩm ".$ten ." vào giỏ hàng!";
+  echo count($cart)."";
 ?>

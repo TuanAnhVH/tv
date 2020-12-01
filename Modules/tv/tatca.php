@@ -35,19 +35,3 @@
     ?>
   </div>
 </div>
-
-<script>
-  $('.btnmua').click(function(){
-    var id= $(this).attr("data-id");
-    $.ajax({
-      method: "POST",
-    url: "dathang.php",
-    data:{
-          "id":id,
-        } ,
-    success : function(response){
-          alert(response);
-        },
-    })
-  });
-</script>

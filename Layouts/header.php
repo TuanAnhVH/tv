@@ -2,6 +2,7 @@
   $sanpham= new sanpham();
   if(isset($_GET['s']))
     $search=$_GET['s'];
+    
 ?>
 <div class="wrap">
   <div class="header">
@@ -14,7 +15,8 @@
     <div class="clear"> </div>
     <div class="header-top-nav">
       <ul>
-        <li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=giohang')?>" class="text-danger">Giỏ hàng: </a></li>&nbsp;0 sản phẩm
+        <li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=giohang')?>" class="text-danger">
+          Giỏ hàng: </a>&nbsp;<span id="soluonggio"></span> sản phẩm</li>
       </ul>
     </div>
     <div class="clear"> </div>

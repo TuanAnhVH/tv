@@ -44,8 +44,8 @@
             <input type="number" value="<?php echo $soluong ?>"  min="1" data-id="<?php echo $row[0]; ?>"
               style="width:25%; margin: 0px auto;" class="form-control text-primary sl">
           </td>
-          <td><?php echo saves::change_price($gia)."" ?></td>
-          <td><?php echo saves::change_price($thanhtien)." vnd"; ?></td>
+          <td id="dongia-<?php echo $row[0]; ?>"><?php echo saves::change_price($gia)."" ?></td>
+          <td class="thanhtien" id="thanhtien-<?php echo $row[0]; ?>"><?php echo saves::change_price($thanhtien); ?></td>
           <td> <a href="<?php echo $nh->h->get_url('tv/?m=common&a=home&tl=deletegio&i=gh&id='.$row[0])?>">
             <i class="fas fa-trash-alt text-danger"></i></a>
           </td>
@@ -56,7 +56,7 @@
       <?php
         if(!empty($cart))
         {
-          echo ' <h3 class="mb-3">Tổng: '.saves::change_price($tongcong).' vnd</h3> 
+          echo ' <h3 class="mb-3">Tổng: <span id="tongtien">'.saves::change_price($tongcong).'</span> vnd</h3> 
           <a href="'.$nh->h->get_url('tv/?m=common&a=home&tl=thanhtoan').'"><button class="btn btn-success">Đặt hàng</button></a>
           <a href="'.$nh->h->get_url('tv/?m=common&a=home&tl=deletegio').'"><button class="btn btn-warning">Làm mới</button></a>';
         }
@@ -66,20 +66,3 @@
   </div>
 </div>
 
-<script>
-  $('.sl').change(function(){
-    var id= $(this).attr("data-id");
-    var sl= $(this).val();
-    $.ajax({
-      method: "POST",
-    url: "doisoluong.php",
-    data:{
-          "id":id,
-          "sl":sl
-        } ,
-    success : function(response){
-          alert("cap nhat thanh cong");
-        },       
-    })
-  });
-</script>
