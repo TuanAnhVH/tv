@@ -1,5 +1,4 @@
 <?php
-
   $nh= new sanpham();
   $ten="";
   $gia=0;

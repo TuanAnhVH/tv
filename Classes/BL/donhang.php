@@ -19,7 +19,7 @@ class donhang extends Database
    
    function db_get_donhang_lastest()
    {
-      $sql = "select * from donhang ORDER BY 'madonhang' DESC limit 0,1";
+      $sql = "select * from donhang ORDER BY madonhang DESC limit 0,1";
       $params = [];
       return $this->db_get_row($sql, $params);
    }
