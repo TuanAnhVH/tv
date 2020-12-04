@@ -100,6 +100,11 @@
           include_once("Modules/thongke/banhang.php");
               break;
        //-----------------------------------------
+      case "lph":
+				
+        include_once("Modules/Phanhoi/list.php");
+            break;
+     //-----------------------------------------
 			default:
 				include_once("Modules/tatca/tatca.php");
 				break;

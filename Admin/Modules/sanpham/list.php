@@ -18,8 +18,6 @@
     else
     $page=1;
 
-   
-
 ?>
     
 <div class="container">

@@ -60,6 +60,11 @@
             <span class="fa fa-table"></span> Thống kê
           </a>
         </li>
+        <li class="ripple">
+          <a href="<?php echo $new->h->get_url('tv/admin/?tl=lph') ?>">
+            <span class="fa fa-anchor"></span> Phản hồi
+          </a>
+        </li>
       </ul>
     </div>
 </div>
