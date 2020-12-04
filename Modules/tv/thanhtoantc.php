@@ -2,7 +2,7 @@
   $kq="fail";
   $diachi="";
   $ten="";
-  $sdt="";
+  $sodienthoai="";
   $email="";
 
   $nh= new sanpham();
@@ -15,15 +15,15 @@
     if(isset($_POST['txttenkhachhang']))
       $ten=$_POST['txttenkhachhang'];
     if(isset($_POST['txtsodienthoai']))
-      $sdt=$_POST['txtsodienthoai'];
+      $sodienthoai=$_POST['txtsodienthoai'];
     if(isset($_POST['txtemail']))
       $email=$_POST['txtemail'];
-    if(!empty($diachi) && !empty($ten) && !empty($sdt))
+    if(!empty($diachi) && !empty($ten) && !empty($sodienthoai))
     {
       $data=
       [
         'tenkhachhang'=>$ten,
-        'sdt'=>$sdt,
+        'sodienthoai'=>$sodienthoai,
         'email'=>$email,
         'diachi'=>$diachi
       ];

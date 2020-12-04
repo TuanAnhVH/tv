@@ -47,7 +47,7 @@
               <tr class="align-middle text-center">
                 <td><?php echo $lst['madonhang']; ?></td>
                 <td><?php echo $lst['tenkhachhang']; ?></td>
-                <td><?php   echo $lst['sdt']; ?></td>
+                <td><?php   echo $lst['sodienthoai']; ?></td>
                 <td><?php  echo $lst['ngaylap']; ?></td>
                 <td><?php  echo $lst['ngaythanhtoan']; ?></td>
                 <td><?php  echo saves::change_price($tong).' vnd'; ?></td>                   

@@ -25,7 +25,7 @@
                                 <th class=" text-center">Mã đơn hàng</th>
                                 <th class=" text-center">Tên khách hàng</th>
                                 <th class=" text-center">Số điện thoại</th>
-								<th class=" text-center">Ngày đặt hàng</th>
+								<th class=" text-center">Trạng thái</th>
 								<th class=" text-center">Ngày thanh toán</th>
 								<th class=" text-center">Tổng tiền</th>
 								<th class=" text-center">Thao tác</th>
@@ -48,8 +48,8 @@
                             <tr class="align-middle text-center">
                                 <td><?php echo $u['madonhang']; ?></td>
                                 <td><?php echo $u['tenkhachhang']; ?></td>
-                                <td><?php   echo $u['sdt']; ?></td>
-								<td><?php  echo $u['ngaylap']; ?></td>
+                                <td><?php   echo $u['sodienthoai']; ?></td>
+								<td><?php  echo $u['tentrangthai']; ?></td>
 								<td><?php  echo $u['ngaythanhtoan']; ?></td>
 								<td><?php  echo saves::change_price($tong).' vnd'; ?></td>
                                 

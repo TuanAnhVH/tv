@@ -35,7 +35,7 @@
 					</tr>	
 					<tr>
 						<td><label class=" text-bold text-primary">Số điện thoại: </label> </td>
-						<td><label class=" ml-3"> <?php echo $donhang['sdt'] ?> </label></td>
+						<td><label class=" ml-3"> <?php echo $donhang['sodienthoai'] ?> </label></td>
 					</tr>
 					<tr>
 						<td><label class=" text-bold text-primary">Email: </label> </td>
@@ -47,7 +47,7 @@
 					</tr>
 					<tr>
 						<td><label class=" text-bold text-primary">Ngày đặt hàng: </label> </td>
-						<td><label class=" ml-3"> <?php echo $donhang['ngaylap'] ?> </label></td>
+						<td><label class=" ml-3"> <?php echo $donhang['ngaytao'] ?> </label></td>
 					</tr>
 					<tr>
 						<td><label class=" text-bold text-primary">Ngày thanh toán: </label> </td>
