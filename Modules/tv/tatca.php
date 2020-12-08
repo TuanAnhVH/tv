@@ -1,7 +1,7 @@
 <?php
   $new = new sanpham();
   $paging_html = "";
-  $lst = $new->db_get_list_sanpham_paging($paging_html);
+  $lst = $new->db_get_list_sanpham_paging_user($paging_html);
   $lst_all= $new->db_get_list_allsanpham();
 ?>
 

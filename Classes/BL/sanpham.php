@@ -112,13 +112,13 @@ class sanpham extends Database
    function db_get_list_sanpham_paging(&$paging_html)
      {
          $link = $this->h->get_url("tv/admin/?tl=lnh&page={page}");
-         $sql = "select * from v_sanpham_nhanhieu order by masanpham";
+         $sql = "select * from v_sanpham_nhanhieu order by manhanhieu";
          $total_records = $this->db_num_rows($sql);
          $current_page = $this->h->input_get('page');
          $limit = 12;
          
          $paging = $this->h->paging($link,$total_records,$current_page,$limit);
-         $sql = "select * from v_sanpham_nhanhieu order by masanpham limit {$paging['start']},{$paging['limit']}";
+         $sql = "select * from v_sanpham_nhanhieu order by manhanhieu limit {$paging['start']},{$paging['limit']}";
          $paging_html = $paging['html'];
          return $this->db_get_list($sql);
      }
@@ -128,13 +128,13 @@ class sanpham extends Database
      function db_get_list_sanpham_paging_user(&$paging_html)
      {
          $link = $this->h->get_url("tv/?m=common&a=home&tl=tatca&page={page}");
-         $sql = "select * from v_sanpham_nhanhieu order by tensanpham";
+         $sql = "select * from v_sanpham_nhanhieu order by masanpham";
          $total_records = $this->db_num_rows($sql);
          $current_page = $this->h->input_get('page');
          $limit = 12;
          
          $paging = $this->h->paging($link,$total_records,$current_page,$limit);
-         $sql = "select * from v_sanpham_nhanhieu order by tensanpham limit {$paging['start']},{$paging['limit']}";
+         $sql = "select * from v_sanpham_nhanhieu order by masanpham limit {$paging['start']},{$paging['limit']}";
          $paging_html = $paging['html'];
          return $this->db_get_list($sql);
      }
