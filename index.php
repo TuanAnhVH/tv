@@ -35,6 +35,7 @@ if (file_exists($path)) {
    include_once('Classes/BL/nhanhieu.php');
    include_once('Classes/BL/taikhoan.php');
    include_once('Classes/BL/donhang.php');
+   include_once('Classes/BL/phanhoi.php');
    include_once('Classes/DA/Save.php');
    include_once($path);
 } else {

@@ -42,7 +42,7 @@
             </thead>
             <tbody>
               <?php
-                $stt=1;
+                $stt=($page-1)*12+1;
                 if(!empty($lst_new))
                   foreach($lst_new as $row){
               ?>
