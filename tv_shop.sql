@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 08, 2020 lúc 04:30 PM
+-- Thời gian đã tạo: Th12 11, 2020 lúc 05:18 PM
 -- Phiên bản máy phục vụ: 10.4.16-MariaDB
 -- Phiên bản PHP: 7.4.12
 
@@ -60,7 +60,13 @@ INSERT INTO `chitietdonhang` (`id`, `madonhang`, `masanpham`, `soluong`, `dongia
 (57, 284, 'QA55Q8CAM', 1, 43900000),
 (58, 285, 'QA55Q8CAM', 2, 43900000),
 (59, 285, 'QA55Q6FN', 1, 20300000),
-(60, 286, 'UA55N', 2, 11400000);
+(60, 286, 'UA55N', 2, 11400000),
+(61, 287, 'LC-32LE375X', 2, 9000000),
+(62, 287, 'LC-40SA5500X', 1, 14000000),
+(63, 288, '43Q65T', 2, 14300000),
+(64, 289, '43Q65T', 1, 14300000),
+(65, 289, 'KD-55A8H', 2, 19000000),
+(66, 289, '49NANO81TNA', 1, 46000000);
 
 -- --------------------------------------------------------
 
@@ -86,14 +92,17 @@ CREATE TABLE `donhang` (
 INSERT INTO `donhang` (`madonhang`, `tenkhachhang`, `sodienthoai`, `email`, `diachi`, `ngaytao`, `ngaythanhtoan`, `trangthai`) VALUES
 (277, 'Nguyễn Thanh Thuỳ', '0918278788', '', 'lsdc', '2020-12-02 09:53:51', NULL, 1),
 (278, 'Nguyễn Thanh Thuỳ', '0917293011', '', 'dsd', '2020-12-02 09:54:13', NULL, 1),
-(279, 'Hoàng Văn Tam', '0918278788', '', 'dsâ', '2020-12-02 10:01:59', NULL, 1),
+(279, 'Hoàng Văn Tam', '0918278788', '', 'dsâ', '2020-12-02 10:01:59', '2020-12-11 15:53:09', 1),
 (280, 'Ngô Văn Chính', '0900900900', 'thuy@gmail.com', 'cv', '2020-12-02 10:02:40', NULL, 1),
 (281, 'Ngô Văn Chính', '0900900900', 'thuy@gmail.com', 'cv', '2020-12-02 10:03:06', '2020-12-04 08:26:29', 1),
 (282, 'Nguyễn Văn Long', '0918278788', '', 'dsađf', '2020-12-02 10:03:49', NULL, 1),
 (283, 'Nguyễn Thanh Thuỳ', '0917293011', '', 'lo', '2020-12-02 10:05:55', NULL, 1),
 (284, 'Hoàng Thị Thu', '0911826391', 'thu@gmail.com', 'Thanh Hoá\r\n', '2020-12-04 07:59:33', '2020-12-04 08:47:37', 1),
 (285, 'Lê Thanh Sơn', '0999772577', 'son@gmail.com', 'Thái Bình', '2020-12-04 09:05:41', NULL, 1),
-(286, 'Hoàng Thị Tứ', '0918263511', 'tu@gmail.com', 'Hà Nội', '2020-12-04 09:52:33', NULL, 1);
+(286, 'Hoàng Thị Tứ', '0918263511', 'tu@gmail.com', 'Hà Nội', '2020-12-04 09:52:33', NULL, 1),
+(287, 'Nguyễn Quang Huy', '0917255199', 'huy@gmail.com', 'Bến Tre', '2020-12-11 14:12:45', NULL, 1),
+(288, 'Hoàng Phi Hồng', '0917293011', 'hong@gmail.com', 'Hà Nội', '2020-12-11 14:40:59', '2020-12-11 15:42:47', 1),
+(289, 'Ngô Văn Trường', '0900293712', 'truong@gmail.com', 'Thanh Hoá', '2020-12-11 14:50:54', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -150,7 +159,7 @@ INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `manhanhieu`, `giatien`, `mota
 ('55Q70TAK', 'Samsung 55Q70TAK 55 inch', 21, 33000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"font-weight: 700;\">Đắm Chìm Trong Khung Hình 4K Đỉnh Cao</span></p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Mở ra kỷ nguyên chất lượng hình ảnh chân thực bạn chưa từng thấy. Trên một khung hình sống động, từng chi tiết nhỏ nhất được tái tạo tỉ mỉ đến khó tin, kết hợp với độ phân giải đỉnh cao, QLED 4K Q70T như bao trùm mọi giác quan, biến từng thước phim trở nên chân thật như chính bạn đang chứng kiến.</p>', 'e2e89f39d776fa5ba132a55e11ac5196.jpg', '2020-12-05 15:00:01'),
 ('55UM7300', 'LED LG 4K 55 inch 55UM7300', 20, 10200000, '<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Cho dù bạn ngồi chỗ nào, góc xem rộng của tấm nền IPS 4K giúp hiển thị độ chính xác màu gần như 100%, thậm chí từ góc xem 60 độ.</span></p><p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">4K Cinema HDR của tivi LG 55 inch mang đến hình ảnh của nhà làm phim bằng việc hỗ trợ hầu hết các định dạng HDR. Đắm chìm trong không gian điện ảnh với các định dạng HDR chính bao gồm Advanced HDR của Techncolor và HDR10 Pro.</span></p>', '0182acc7b6cc7aac98db801cd99e43ea.jpg', '2020-12-05 14:10:27'),
 ('55UM7400PTA', 'LG 4K 55 inch 55UM7400PTA', 20, 11800000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Chíp xử lý thông minh: Quad Core Processor</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">HDR: 4K Active HDR</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">HDR10 Pro & HLG: Có</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Bộ nâng cấp màu – Color Enhancer: Advanced Color Enhancer</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Màu sắc chính xác: True Color Accuracy</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Nâng cấp độ phân giải – Upscaler: 4K Upscaler</li></ul>', '7b58f029519c4480d87033c662b726bf.jpg', '2020-12-05 14:08:57'),
-('55UM7600PTA', 'LG 4K 55 inch 55UM7600PTA', 20, 12600000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tính năng thông minh (Cập nhật 3/2019)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Hệ điều hành, giao diện: WebOS 4.5</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Các ứng dụng sẵn có: Youtube, Netflix, Trình duyệt web, LG Content Store</li></ul>', 'ebd611929b30465141d03b656246e544.jpg', '2020-12-05 14:11:39'),
+('55UM7600PTA', 'LG 4K 55 inch 55UM7600PT', 20, 12600000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tính năng thông minh (Cập nhật 3/2019)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Hệ điều hành, giao diện: WebOS 4.5</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Các ứng dụng sẵn có: Youtube, Netflix, Trình duyệt web, LG Content Store</li></ul>', 'ebd611929b30465141d03b656246e544.jpg', '2020-12-05 14:11:39'),
 ('65A8G', '4K Sony 65inch 65A8G', 19, 49600000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Sống trọn với hiện tại cùng hình ảnh chân thực như cuộc sống và âm thanh xứng tầm đẳng cấp. Hình ảnh tinh tế đến từng chi tiết kết hợp cùng Sound-from-Picture Reality™ của chúng tôi cho hiệu suất âm thanh-hình ảnh tuyệt diệu.</span></p>', 'cc2dd7da55f02234f87c308f60535ac6.jpg', '2020-12-05 14:31:28'),
 ('65B6T', 'OLED LG 65 inch 65B6T', 20, 48700000, '<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify; color: rgb(128, 0, 0);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-oled-lg-65-inch-65b6t/\" style=\"color: rgb(128, 0, 0);\">Tivi OLED LG 65 inch 65B6T</a></span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> được thiết kế siêu mỏng vô cùng tinh tế (do thiết kế không cần dùng đèn nền). Với thiết kế này, bạn có thể thoải mái lựa chọn việc đặt để tivi ở bất kỳ đâu trong ngôi nhà của bạn dù là khi treo tường hay để bàn đều rất sang trọng.</span></p>', '8c11c7fe378700a17a7c723f483c8c32.jpg', '2020-11-28 08:37:12'),
 ('65B9PTA', 'LG 4K 65 Inch 65B9PTA', 20, 33900000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li data-block=\"true\" data-editor=\"65cfr\" data-offset-key=\"arauf-0-0\" style=\"width: 600px; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Điều khiển tivi bằng điện thoại: Bằng ứng dụng LG TV Remote, LG Tivi Plus<br>Kết nối không dây với điện thoại, máy tính bảng Chuyển video, ảnh với LG Smartshare</li></ul>', '1511882aa35996e07d1cd1d02d29b420.jpg', '2020-12-05 14:04:51'),
@@ -336,13 +345,13 @@ ALTER TABLE `trangthai`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=287;
+  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=290;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanhieu`

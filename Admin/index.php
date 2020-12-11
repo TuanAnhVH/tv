@@ -20,6 +20,7 @@ if (file_exists($path)) {
   include_once('../Classes/BL/sanpham.php');
   include_once('../Classes/BL/taikhoan.php');
   include_once('../Classes/BL/donhang.php');
+  include_once('../Classes/BL/phanhoi.php');
   include_once('../Classes/DA/save.php');
   include_once($path);
 } else {

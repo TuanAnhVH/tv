@@ -944,7 +944,7 @@ body{
 }
 .contact-form span{
 	display:block;
-	font-size:0.8125em;
+	font-size:1.1em;
 	color: #333;
 	padding-bottom:5px;
 	font-family: 'Open Sans', sans-serif;
