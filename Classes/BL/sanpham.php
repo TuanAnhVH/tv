@@ -75,11 +75,17 @@ class sanpham extends Database
      $sql = "select * from sanpham";
      return $this->db_num_rows($sql);
    }
-
-
    function db_get_list_sanpham_by_nhanhieu($id)
    {
      $sql = "select * from sanpham where manhanhieu=$id";
+     return $this->db_get_list($sql);
+   }
+
+   function db_get_list_sanpham_tuongduong($price)
+   {
+     $under = $price-3000000;
+     $upper = $price+3000000;
+     $sql = "select * from v_sanpham_nhanhieu where giatien between $under and $upper limit 5";
      return $this->db_get_list($sql);
    }
 

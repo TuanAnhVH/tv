@@ -38,15 +38,10 @@
     <div class="col-10 mt-2" >
       <h4 class="text-primary">Mô tả :</h4>
       <p><?php echo $sp['mota'] ?></p>
-      <div class="share">
-        <ul>
-          <li><a href="#"><img src="public/images/user/bg/twitter.png" alt="twitter"></a></li>
-          <li><a href="#"><img src="public/images/user/bg/facebook.png" alt="facebook"></li>
-          <li><a href="#"><img src="public/images/user/bg/rss.png" alt="Rssk"></li>
-        </ul>
-      </div>
-    </div>
+    </div> 
   </div>
   <?php include_once("Layouts/right_menu.php"); ?>
+  <?php include_once("Modules/tv/tuongduong.php"); ?>
   <div class="clear"></div>
 </div>
+
