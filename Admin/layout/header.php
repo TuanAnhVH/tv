@@ -26,10 +26,11 @@
                
               <ul style="float:left;">
                 <li >
-                  <form action="<?php echo $new->h->get_url('tv/admin/?tl=tk&tl2='.$tl2);?> " method="post">
+                  <form action="<?php echo $new->h->get_url('tv/admin');?>" method="get">
                     <div class="search">
-                    <input type="text" id="search" name="txtsearch" style="height:27px;">
-                    <input type="hidden" name="request_name" value="form-search">
+                    <input type="hidden" name="tl" value="tk">
+                    <input type="hidden" name="tl2" value="<?php echo $tl2; ?>">
+                    <input type="text" id="search" name="tk" style="height:27px;">         
                     <input type="submit" value="Tìm kiếm" style="height:29px;font-weight:bold; " id="searchbtn"> 
                     </div>
                     </form>

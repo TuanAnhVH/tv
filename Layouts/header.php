@@ -1,14 +1,12 @@
 <?php 
-  $sanpham= new sanpham();
-  if(isset($_GET['s']))
-    $search=$_GET['s'];
-    
+  $sanpham= new sanpham();  
 ?>
 <div class="wrap">
   <div class="header">
     <div class="search-bar">
       <form action="<?php echo $sanpham->h->get_url('tv/'); ?> " method="get" >
-        <input type="text" id="search" name="s" maxlength="400" >		
+        <input type="hidden" name="tl" value="tk" >
+        <input type="text" id="search" name="s" maxlength="400" >			
         <input type="submit" value="Tìm kiếm" id="searchbtn" />		
       </form>
     </div>
@@ -16,7 +14,7 @@
     <div class="header-top-nav">
       <ul>
         <li><a href="<?php echo $sanpham->h->get_url('tv/?m=common&a=home&tl=giohang')?>" class="text-danger">
-          Giỏ hàng: </a>&nbsp;<span id="soluonggio"></span> sản phẩm</li>
+          Giỏ hàng: </a>&nbsp;<span id="soluonggio"></span> sản phẩm.</li>
       </ul>
     </div>
     <div class="clear"> </div>

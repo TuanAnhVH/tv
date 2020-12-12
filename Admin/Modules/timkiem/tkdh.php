@@ -1,14 +1,9 @@
 <?php
   $new = new donhang();
   $search='';
-  if( $new ->h->is_submit('form-search'))
-  {
-      $search=  $new->h->input_post('txtsearch');
-  }
-  else if(isset($_GET['tk']))
-      $search=$_GET['tk'];
-      
-
+  if(isset($_GET['tk']))
+    $search=$_GET['tk'];
+  
   $lst =$new->db_get_donhang_by_id($search);
 ?>
 <div class="container">
@@ -26,7 +21,7 @@
             <th class=" text-center">Mã đơn hàng</th>
             <th class=" text-center">Tên khách hàng</th>
             <th class=" text-center">Số điện thoại</th>
-            <th class=" text-center">Ngày đặt hàng</th>
+            <th class=" text-center">Trạng thái</th>
             <th class=" text-center">Ngày thanh toán</th>
             <th class=" text-center">Tổng tiền</th>
             <th class=" text-center">Thao tác</th>
@@ -48,7 +43,7 @@
                 <td><?php echo $lst['madonhang']; ?></td>
                 <td><?php echo $lst['tenkhachhang']; ?></td>
                 <td><?php   echo $lst['sodienthoai']; ?></td>
-                <td><?php  echo $lst['ngaylap']; ?></td>
+                <td><?php  echo $lst['tentrangthai']; ?></td>
                 <td><?php  echo $lst['ngaythanhtoan']; ?></td>
                 <td><?php  echo saves::change_price($tong).' vnd'; ?></td>                   
                 <td>

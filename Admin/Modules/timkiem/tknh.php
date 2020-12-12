@@ -5,12 +5,7 @@
   $new = new sanpham();
   $search="";
   $paging_html = "";
-  
-  if( $new ->h->is_submit('form-search'))
-      {
-          $search=  $new->h->input_post('txtsearch');
-      }
-  else if(isset($_GET['tk']))
+  if(isset($_GET['tk']))
       $search=$_GET['tk'];
   $lst=  $new ->db_get_list_sanpham_paging_admin_by_search($paging_html,$search,$tl2);
   $lst_all=  $new ->db_get_list_allsanpham_by_search($search);
