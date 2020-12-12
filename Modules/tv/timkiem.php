@@ -1,4 +1,7 @@
-<?php 
+<?php
+  $search = "";
+  if(isset($_REQUEST["s"]))
+    $search = $_REQUEST["s"];
   $new = new sanpham();
   $paging_html = "";
   $lst=  $new->db_get_list_sanpham_paging_user_by_search($paging_html,$search);

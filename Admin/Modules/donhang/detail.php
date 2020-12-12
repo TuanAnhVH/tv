@@ -69,6 +69,10 @@
             <td><label class=" ml-3"> <?php echo $donhang['diachi'] ?> </label></td>
           </tr>
           <tr>
+            <td><label class=" text-bold text-primary">Trạng thái: </label> </td>
+            <td><label class=" ml-3"> <?php echo $donhang['tentrangthai'] ?> </label></td>
+          </tr>  
+          <tr>
             <td><label class=" text-bold text-primary">Ngày đặt hàng: </label> </td>
             <td><label class=" ml-3"> <?php echo $donhang['ngaytao'] ?> </label></td>
           </tr>

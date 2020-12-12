@@ -57,11 +57,11 @@
       <div class="card ">
         <div class="card-header bg-primary text-white">
           <h2 class="">Danh sách phản hồi</h2>
-          <form action=" <?php echo $cat->h->get_url('tv/admin/?tl=lph'); ?> " method="post" style="width: 400px;">
+          <form action=" <?php echo $cat->h->get_url('tv/admin'); ?> " method="get" style="width: 400px;">
             <input type="date" name="date" max="3000-12-31" 
             min="1000-01-01" class="form-control"  style="width:200px;float:left;"
             value="<?php echo $year.'-'.$month.'-'.$day?>">
-            <input type="hidden" name="request_name" value="thongke">
+            <input type="hidden" name="tl" value="lph">
             <input type="submit" style="height:34px;" class="btn btn-warning ml-2" value="Xem">
           </form>
         </div>
