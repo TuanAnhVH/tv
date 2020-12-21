@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 11, 2020 lúc 05:18 PM
+-- Thời gian đã tạo: Th12 21, 2020 lúc 05:22 PM
 -- Phiên bản máy phục vụ: 10.4.16-MariaDB
 -- Phiên bản PHP: 7.4.12
 
@@ -40,33 +40,8 @@ CREATE TABLE `chitietdonhang` (
 --
 
 INSERT INTO `chitietdonhang` (`id`, `madonhang`, `masanpham`, `soluong`, `dongia`) VALUES
-(40, 277, '49N5500', 1, 9100000),
-(41, 277, '32N4000', 1, 4800000),
-(42, 278, '49N5500', 1, 9100000),
-(43, 278, '32N4000', 1, 4800000),
-(44, 279, '49N5500', 1, 9100000),
-(45, 279, '32N4000', 1, 4800000),
-(46, 280, '49N5500', 1, 9100000),
-(47, 280, '32N4000', 2, 4800000),
-(48, 280, '65B6T', 1, 48700000),
-(49, 281, '49N5500', 1, 9100000),
-(50, 281, '32N4000', 2, 4800000),
-(51, 281, '65B6T', 1, 48700000),
-(52, 282, '49N5500', 1, 9100000),
-(53, 282, '32N4000', 2, 4800000),
-(54, 282, '65B6T', 2, 48700000),
-(55, 283, 'QA49Q6FN', 2, 15000000),
-(56, 284, 'QA55Q8C', 1, 28300000),
-(57, 284, 'QA55Q8CAM', 1, 43900000),
-(58, 285, 'QA55Q8CAM', 2, 43900000),
-(59, 285, 'QA55Q6FN', 1, 20300000),
-(60, 286, 'UA55N', 2, 11400000),
-(61, 287, 'LC-32LE375X', 2, 9000000),
-(62, 287, 'LC-40SA5500X', 1, 14000000),
-(63, 288, '43Q65T', 2, 14300000),
-(64, 289, '43Q65T', 1, 14300000),
-(65, 289, 'KD-55A8H', 2, 19000000),
-(66, 289, '49NANO81TNA', 1, 46000000);
+(79, 297, '43Q65T', 1, 14300000),
+(80, 297, '43LM5700', 1, 6300000);
 
 -- --------------------------------------------------------
 
@@ -90,19 +65,7 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`madonhang`, `tenkhachhang`, `sodienthoai`, `email`, `diachi`, `ngaytao`, `ngaythanhtoan`, `trangthai`) VALUES
-(277, 'Nguyễn Thanh Thuỳ', '0918278788', '', 'lsdc', '2020-12-02 09:53:51', NULL, 1),
-(278, 'Nguyễn Thanh Thuỳ', '0917293011', '', 'dsd', '2020-12-02 09:54:13', NULL, 1),
-(279, 'Hoàng Văn Tam', '0918278788', '', 'dsâ', '2020-12-02 10:01:59', '2020-12-11 15:53:09', 1),
-(280, 'Ngô Văn Chính', '0900900900', 'thuy@gmail.com', 'cv', '2020-12-02 10:02:40', NULL, 1),
-(281, 'Ngô Văn Chính', '0900900900', 'thuy@gmail.com', 'cv', '2020-12-02 10:03:06', '2020-12-04 08:26:29', 1),
-(282, 'Nguyễn Văn Long', '0918278788', '', 'dsađf', '2020-12-02 10:03:49', NULL, 1),
-(283, 'Nguyễn Thanh Thuỳ', '0917293011', '', 'lo', '2020-12-02 10:05:55', NULL, 1),
-(284, 'Hoàng Thị Thu', '0911826391', 'thu@gmail.com', 'Thanh Hoá\r\n', '2020-12-04 07:59:33', '2020-12-04 08:47:37', 1),
-(285, 'Lê Thanh Sơn', '0999772577', 'son@gmail.com', 'Thái Bình', '2020-12-04 09:05:41', NULL, 1),
-(286, 'Hoàng Thị Tứ', '0918263511', 'tu@gmail.com', 'Hà Nội', '2020-12-04 09:52:33', NULL, 1),
-(287, 'Nguyễn Quang Huy', '0917255199', 'huy@gmail.com', 'Bến Tre', '2020-12-11 14:12:45', NULL, 1),
-(288, 'Hoàng Phi Hồng', '0917293011', 'hong@gmail.com', 'Hà Nội', '2020-12-11 14:40:59', '2020-12-11 15:42:47', 1),
-(289, 'Ngô Văn Trường', '0900293712', 'truong@gmail.com', 'Thanh Hoá', '2020-12-11 14:50:54', NULL, 1);
+(297, 'Nguyễn Quốc Cường', '0917273712', 'cuong@gmail.com', 'Quảng Bình', '2020-12-21 15:41:42', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -124,6 +87,38 @@ INSERT INTO `nhanhieu` (`manhanhieu`, `tennhanhieu`) VALUES
 (19, 'Sony'),
 (20, 'LG'),
 (21, 'Samsung');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `phanhoi`
+--
+
+CREATE TABLE `phanhoi` (
+  `id` int(11) NOT NULL,
+  `tenkhachhang` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `sodienthoai` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `noidung` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `ngaytao` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `phanhoi`
+--
+
+INSERT INTO `phanhoi` (`id`, `tenkhachhang`, `sodienthoai`, `email`, `noidung`, `ngaytao`) VALUES
+(2, 'Hoàng Văn Tam', '0917293011', 'Tan@gmail.com', 'Cửa hàng chất lượng', '2020-12-11 14:39:44'),
+(4, 'Ngô Văn Thanh', '0918278788', 'anh@gmail.com', 'Dịch vụ tốt', '2020-12-11 14:49:10'),
+(5, 'Nguyễn Văn Long', '0918278788', 'long@gmail.com', 'Rất pro', '2020-12-11 14:49:46'),
+(6, 'Lê Thị kiều', '0918209312', 'kieu@gmail.com', 'Giao hàng nhanh chóng.', '2020-12-11 16:10:35'),
+(7, 'Hồ Xuân Phong', '0977567456', 'phong@gmail.com', 'Sản phẩm uy tín chất lượng cao.', '2020-12-11 16:19:37'),
+(9, 'Nguyễn Công Hùng', '0917253712', 'hung@gmail.com', 'Cửa hàng quá tuyệt vời.', '2020-12-12 13:43:01'),
+(10, 'Hoàng Văn Tam', '0918209312', 'Tan@gmail.com', 'Cưa hàng chất lượng tuyệt vời!!', '2020-12-20 07:13:24'),
+(11, 'Nguyễn Thanh Thuỳ', '0918278788', 'thuy@gmail.com', 'Sản phẩm chất lượng lại còn rẻ!', '2020-12-20 07:13:59'),
+(12, 'Trương Tuấn Anh', '0912374992', 'anh@gmail.com', 'Dịch vụ ổn định, tư vấn nhiệt tình.', '2020-12-20 07:14:36'),
+(13, 'Trần Mạnh Quang', '0912638823', 'quang@gmail.com', 'Cần thêm phương thc thanh toán trực tuyến.', '2020-12-20 07:15:12'),
+(14, 'Hoàng Bảo Nhi', '0918273617', 'nhi@gmail.com', 'Giao hàng nhanh, chất lượng cần phải qua thời gian kiểm chứng.', '2020-12-20 07:16:05');
 
 -- --------------------------------------------------------
 
@@ -305,13 +300,15 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 ALTER TABLE `chitietdonhang`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `manuochoa` (`masanpham`);
+  ADD KEY `manuochoa` (`masanpham`),
+  ADD KEY `fk_MaDonHang` (`madonhang`);
 
 --
 -- Chỉ mục cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  ADD PRIMARY KEY (`madonhang`);
+  ADD PRIMARY KEY (`madonhang`),
+  ADD KEY `fk_MaTrangThai` (`trangthai`);
 
 --
 -- Chỉ mục cho bảng `nhanhieu`
@@ -320,10 +317,17 @@ ALTER TABLE `nhanhieu`
   ADD PRIMARY KEY (`manhanhieu`);
 
 --
+-- Chỉ mục cho bảng `phanhoi`
+--
+ALTER TABLE `phanhoi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  ADD PRIMARY KEY (`masanpham`);
+  ADD PRIMARY KEY (`masanpham`),
+  ADD KEY `fk_manhanhieu` (`manhanhieu`);
 
 --
 -- Chỉ mục cho bảng `taikhoan`
@@ -345,19 +349,48 @@ ALTER TABLE `trangthai`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=290;
+  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=298;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanhieu`
 --
 ALTER TABLE `nhanhieu`
   MODIFY `manhanhieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT cho bảng `phanhoi`
+--
+ALTER TABLE `phanhoi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `chitietdonhang`
+--
+ALTER TABLE `chitietdonhang`
+  ADD CONSTRAINT `fk_MaDonHang` FOREIGN KEY (`madonhang`) REFERENCES `donhang` (`madonhang`),
+  ADD CONSTRAINT `fk_MaSanPham` FOREIGN KEY (`masanpham`) REFERENCES `sanpham` (`masanpham`);
+
+--
+-- Các ràng buộc cho bảng `donhang`
+--
+ALTER TABLE `donhang`
+  ADD CONSTRAINT `fk_MaTrangThai` FOREIGN KEY (`trangthai`) REFERENCES `trangthai` (`id`);
+
+--
+-- Các ràng buộc cho bảng `sanpham`
+--
+ALTER TABLE `sanpham`
+  ADD CONSTRAINT `fk_manhanhieu` FOREIGN KEY (`manhanhieu`) REFERENCES `nhanhieu` (`manhanhieu`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
