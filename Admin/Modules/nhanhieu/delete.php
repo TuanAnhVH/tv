@@ -1,11 +1,11 @@
 <?php
-    $cat = new theloai();
+    $cat = new nhanhieu();
 
-	if($cat->h->is_submit('delete_theloai'))
+	if($cat->h->is_submit('delete_nhanhieu'))
 	{
-	   $theloai = $cat->h->input_post('theloaiid');
-	   $data =$cat->db_get_list_theloai_by_id($theloai);
-	  $cat->db_delete_theloai($data);
+	   $nhanhieu = $cat->h->input_post('nhanhieuid');
+	   $data =$cat->db_get_list_nhanhieu_by_id($nhanhieu);
+	  $cat->db_delete_nhanhieu($data);
 ?>
 		
 		<script language='javascript'>
