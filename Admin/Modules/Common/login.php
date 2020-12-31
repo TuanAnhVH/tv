@@ -44,16 +44,12 @@
      if(!empty($username) && !empty($password))
      {
          $user_info = $user->db_get_taikhoan_by_id($username);
-       
             
            if(!empty($user_info)&&$user_info['matkhau'] == md5($password))
-           {
-            
+           {       
             $user->r->set_logged($user_info['tendangnhap']);
             $user->h->redirect($user->h->get_url('tv/admin/?m=common&a=admin'));
-           }  
-           
-          
+           }        
      }
   }
 ?>

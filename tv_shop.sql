@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2020 lúc 05:22 PM
+-- Thời gian đã tạo: Th12 29, 2020 lúc 05:17 PM
 -- Phiên bản máy phục vụ: 10.4.16-MariaDB
 -- Phiên bản PHP: 7.4.12
 
@@ -41,7 +41,25 @@ CREATE TABLE `chitietdonhang` (
 
 INSERT INTO `chitietdonhang` (`id`, `madonhang`, `masanpham`, `soluong`, `dongia`) VALUES
 (79, 297, '43Q65T', 1, 14300000),
-(80, 297, '43LM5700', 1, 6300000);
+(80, 297, '43LM5700', 1, 6300000),
+(81, 298, '49UM7400PTA', 1, 11300000),
+(82, 299, '55UM7300', 1, 10200000),
+(83, 299, '55Q70TAK', 1, 33000000),
+(84, 300, '55Q70TAK', 1, 33000000),
+(85, 300, 'QA55Q8CAM', 1, 43900000),
+(86, 301, '55C8PTA', 2, 23500000),
+(87, 302, '55Q70TAK', 2, 33000000),
+(88, 303, '55C8PTA', 1, 23500000),
+(89, 303, 'LC-40SA5500X', 2, 14000000),
+(90, 304, '50UM7600PTA', 1, 10100000),
+(91, 304, '55C8PTA', 1, 23500000),
+(92, 305, 'LC-60UA6800', 1, 40000000),
+(93, 306, 'KD-55A8H', 1, 19000000),
+(94, 306, '49NANO81TNA', 2, 46000000),
+(95, 307, '55Q70TAK', 1, 33000000),
+(96, 308, '43LM5700', 1, 6300000),
+(97, 309, 'LC-40SA5500X', 1, 14000000),
+(98, 309, 'LC-50LE275X', 1, 26900000);
 
 -- --------------------------------------------------------
 
@@ -65,7 +83,19 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`madonhang`, `tenkhachhang`, `sodienthoai`, `email`, `diachi`, `ngaytao`, `ngaythanhtoan`, `trangthai`) VALUES
-(297, 'Nguyễn Quốc Cường', '0917273712', 'cuong@gmail.com', 'Quảng Bình', '2020-12-21 15:41:42', NULL, 1);
+(297, 'Nguyễn Quốc Cường', '0917273712', 'cuong@gmail.com', 'Quảng Bình', '2020-12-21 15:41:42', NULL, 1),
+(298, 'Phan Thị Hoài Thu', '0917273944', 'thu@gmail.com', 'Sóc Trăng', '2020-12-24 15:26:00', NULL, 1),
+(299, 'Nguyễn Văn Sơn', '0916883899', 'son@gmail.com', 'Phú Thọ', '2020-12-24 15:26:43', NULL, 1),
+(300, 'Nguyễn Khánh Phong', '0917256622', 'phong@gmail.com', 'Hà Tĩnh', '2020-12-24 15:27:30', NULL, 1),
+(301, 'Trần Hoàng Ái Nhi', '0978837789', 'nhi@gmail.com', 'Phú Thọ', '2020-12-24 15:28:19', '2020-12-24 15:32:11', 1),
+(302, 'Nguyễn Thị Hằng', '0919299399', 'hang@gmail.com', 'Hà nội', '2020-12-26 08:56:55', NULL, 1),
+(303, 'Phan Thanh Hùng', '0966253867', 'hung@gmail.com', 'Nam Định', '2020-12-26 08:57:54', '2020-12-26 08:59:28', 1),
+(304, 'Hoàng Thị Huyền', '0917278888', 'huyen@gmail.com', 'Nam Định', '2020-12-26 08:58:52', NULL, 1),
+(305, 'Nguyễn ngọc Hùng', '0972737899', 'hung@gmail.com', 'Nghệ An\r\n', '2020-12-29 16:05:40', '2020-12-29 16:10:58', 1),
+(306, 'Hoàng Thị Nguyệt', '0999239333', 'nguyet@gmail.com', 'Hà Nội', '2020-12-29 16:06:28', NULL, 1),
+(307, 'Ngô Thanh Sơn', '0900787678', 'son@gmail.com', 'Sóc Trăng', '2020-12-29 16:07:14', NULL, 1),
+(308, 'Phan Thanh Long', '0967628378', 'long@gmail.com', 'Thái Bình', '2020-12-29 16:07:47', '2020-12-29 16:10:48', 1),
+(309, 'Ngô Thị Huyền', '0923489899', 'huyen@gmail.com', 'Hà Tĩnh', '2020-12-29 16:08:28', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -118,7 +148,10 @@ INSERT INTO `phanhoi` (`id`, `tenkhachhang`, `sodienthoai`, `email`, `noidung`, 
 (11, 'Nguyễn Thanh Thuỳ', '0918278788', 'thuy@gmail.com', 'Sản phẩm chất lượng lại còn rẻ!', '2020-12-20 07:13:59'),
 (12, 'Trương Tuấn Anh', '0912374992', 'anh@gmail.com', 'Dịch vụ ổn định, tư vấn nhiệt tình.', '2020-12-20 07:14:36'),
 (13, 'Trần Mạnh Quang', '0912638823', 'quang@gmail.com', 'Cần thêm phương thc thanh toán trực tuyến.', '2020-12-20 07:15:12'),
-(14, 'Hoàng Bảo Nhi', '0918273617', 'nhi@gmail.com', 'Giao hàng nhanh, chất lượng cần phải qua thời gian kiểm chứng.', '2020-12-20 07:16:05');
+(14, 'Hoàng Bảo Nhi', '0918273617', 'nhi@gmail.com', 'Giao hàng nhanh, chất lượng cần phải qua thời gian kiểm chứng.', '2020-12-20 07:16:05'),
+(15, 'Hoàng Bảo Nhi', '0988299399', 'nhi@gmail.com', 'Cửa hàng chuyên nghiệp lắm ạ', '2020-12-29 16:09:02'),
+(16, 'Lê Thái Bình', '0917727777', 'binh@gmail.com', 'Sản phẩm tốt chất lượng cao.', '2020-12-29 16:09:33'),
+(17, 'Phan Thanh Huy', '0912777388', 'huy@gmail.com', 'Tivi siêu nét, giá cả phải chăng.', '2020-12-29 16:10:05');
 
 -- --------------------------------------------------------
 
@@ -147,7 +180,7 @@ INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `manhanhieu`, `giatien`, `mota
 ('43UM7400PTA', 'LG 4K 43 inch 43UM7400PTA', 20, 8000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(51, 102, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-lg-4k-43-inch-43um7400pta/\" style=\"color: rgb(51, 102, 255);\">Smart Tivi LG 4K 43 inch 43UM7400PTA</a> </span>sở hữu thiết kế tối giản đi kèm chân đế hình chữ V thanh mảnh nhưng không kém phần vững chãi, giúp tivi LG trụ vững trên mọi không gian đặt.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Tivi LG 43 inch phù hợp với các không gian vừa và nhỏ như phòng khách, phòng ngủ,…</p>', 'd278263c59703d52df01107900c87123.jpg', '2020-12-05 14:02:40'),
 ('49N5500', 'Samsung 49 inch 49N5500', 21, 9100000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Trải nghiệm hình ảnh với chiều sâu ấn tượng. Công nghệ Tương Phản Tự Động (Contrast Enhancer) phủ nhiều lớp sáng tối lên toàn bộ màn hình mang đến cảm giác choáng ngợp trước những thước phim hùng vĩ.</span></p>', '4dfc0235480e4085ed8821b64b426827.jpg', '2020-11-28 08:33:25'),
 ('49NANO81TNA', 'NanoCell LG 4K 49 inch 49NANO81TNA', 20, 46000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Smart Tivi LG 4K 49 inch 49NANO81TNA sở hữu thiết kế đơn giản, thanh mảnh cùng chân đế hình bán nguyệt làm nổi bật nét độc đáo riêng của tivi. Sự kết hợp hài hòa của tổng thể tạo nên nét thanh lịch cho cả không gian của bạn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Kích thước màn hình tivi LG 49 inch phù hợp với phòng khách, phòng ngủ,… vừa giải trí cũng vừa là vật trang trí ấn tượng</p>', 'c1ca7eebce716d3c6e07b28a9772d96e.jpg', '2020-12-05 14:57:12'),
-('49UM7400PTA', 'LG 4K 49 inch 49UM7400PTA', 20, 11300000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Bluetooth: Có (kết nối loa bluetooth)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Kết nối Internet: Cổng LAN, Wifi</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng AV: Có cổng Composite và cổng Component</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng HDMI: 3 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng xuất âm thanh: Cổng Optical (Digital Audio Out), HDMI ARC</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">USB: 2 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li></ul>', 'e7d1adaccd2ec2fc39b4d91dda6526e7.jpg', '2020-12-05 14:14:17'),
+('49UM7400PTA', 'LG 4K 49 inch 49UM7400PTA', 20, 12300000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Bluetooth: Có (kết nối loa bluetooth)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Kết nối Internet: Cổng LAN, Wifi</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng AV: Có cổng Composite và cổng Component</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng HDMI: 3 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng xuất âm thanh: Cổng Optical (Digital Audio Out), HDMI ARC</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">USB: 2 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li></ul>', 'e7d1adaccd2ec2fc39b4d91dda6526e7.jpg', '2020-12-05 14:14:17'),
 ('50UM7600PTA', 'LG 4K 50 inch 50UM7600PTA', 20, 10100000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 500px; float: left; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Độ phân giải 4K sắc nét gấp 4 lần Full HD.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Công nghệ 4K Active HDR tăng cường độ tương phản.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Công nghệ True Color Accuracy cho màu sắc chính xác.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Chip xử lý Quad Core hoàn thiện chất lượng hình ảnh.</li></ul><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"> </p>', '2d5570425e180146ecdea48df67e0963.jpg', '2020-12-05 14:13:07'),
 ('55B6T', 'OLED LG 55 inch 55B6T', 20, 21000000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Với thiết kế siêu mỏng Blade Slim (do không có đèn nền phía sau), </span><span style=\"font-weight: 700; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-oled-lg-55-inch-55b6t/\" style=\"color: rgb(0, 0, 255);\">Tivi OLED LG 55B6T</a></span></span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> chắc chắn sẽ là điểm nhấn đắt giá trong việc trang trí ngôi nhà bạn dù là khi treo tường hay để bàn</span></p>', 'f274d450dba86688b40b097ac4556ddc.jpg', '2020-12-05 13:57:38'),
 ('55C8PTA', 'OLED LG 4K 55 inch 55C8PTA', 20, 23500000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-oled-lg-4k-55-inch-55c8pta/\" style=\"color: rgb(0, 0, 255);\">Smart Tivi OLED LG 4K 55 inch 55C8PTA</a></span> với thiết kế không viền sang trọng hòa quyện hoàn hảo với mọi không gian. <span style=\"font-weight: 700;\">Tivi OLED LG</span> tựa như một kiệt tác nghệ thuật, tạo điểm nhấn đẳng cấp cho căn phòng.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Màn hình tivi lớn 55 inch phù hợp với những gian phòng rộng như phòng khách, phòng họp ở công ty,… hoặc với những gia chủ thích xem tivi trên màn hình lớn.</p>', 'ae3e0f6cbf288935a34a2e7fea5d24de.jpg', '2020-12-05 14:01:30'),
@@ -349,25 +382,25 @@ ALTER TABLE `trangthai`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=298;
+  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=310;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanhieu`
 --
 ALTER TABLE `nhanhieu`
-  MODIFY `manhanhieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `manhanhieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT cho bảng `phanhoi`
 --
 ALTER TABLE `phanhoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

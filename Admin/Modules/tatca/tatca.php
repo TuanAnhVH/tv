@@ -57,11 +57,11 @@
                       <div class="col-md-12 col-xs-12 col-md-12 padding-0 box-v4-alert">
                         
                           <p>Bài đăng mới nhất</p>
-                          <b><span class="icon-clock icons"></span> Hôm nay 10:30</b>
+                          <b><span class="icon-clock icons"></span> Hôm qua 10:30</b>
                       </div>
                       
-                        <div>
-                          <img src="asset/img/4.png" alt="" style="height:530px;width:630px;margin:20px 30px 30px 30px">
+                        <div class="col-md-12 col-xs-12 col-md-12 pb-3">
+                          <img src="asset/img/4.png" alt="" style="height:96%;width:100%;">
                         </div>  
                     </div>
                 </div> 
