@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2020 lúc 05:22 PM
+-- Thời gian đã tạo: Th1 01, 2021 lúc 06:30 AM
 -- Phiên bản máy phục vụ: 10.4.16-MariaDB
 -- Phiên bản PHP: 7.4.12
 
@@ -41,7 +41,42 @@ CREATE TABLE `chitietdonhang` (
 
 INSERT INTO `chitietdonhang` (`id`, `madonhang`, `masanpham`, `soluong`, `dongia`) VALUES
 (79, 297, '43Q65T', 1, 14300000),
-(80, 297, '43LM5700', 1, 6300000);
+(80, 297, '43LM5700', 1, 6300000),
+(81, 298, '49UM7400PTA', 1, 11300000),
+(82, 299, '55UM7300', 1, 10200000),
+(83, 299, '55Q70TAK', 1, 33000000),
+(84, 300, '55Q70TAK', 1, 33000000),
+(85, 300, 'QA55Q8CAM', 1, 43900000),
+(86, 301, '55C8PTA', 2, 23500000),
+(87, 302, '55Q70TAK', 2, 33000000),
+(88, 303, '55C8PTA', 1, 23500000),
+(89, 303, 'LC-40SA5500X', 2, 14000000),
+(90, 304, '50UM7600PTA', 1, 10100000),
+(91, 304, '55C8PTA', 1, 23500000),
+(92, 305, 'LC-60UA6800', 1, 40000000),
+(93, 306, 'KD-55A8H', 1, 19000000),
+(94, 306, '49NANO81TNA', 2, 46000000),
+(95, 307, '55Q70TAK', 1, 33000000),
+(96, 308, '43LM5700', 1, 6300000),
+(97, 309, 'LC-40SA5500X', 1, 14000000),
+(98, 309, 'LC-50LE275X', 1, 26900000),
+(99, 310, 'KDL-32R300E', 1, 4900000),
+(100, 310, 'KDL-32R300D', 1, 4900000),
+(101, 311, '49UM7400PTA', 1, 12300000),
+(102, 312, '43LM5700', 2, 6300000),
+(103, 313, '49NANO81TNA', 1, 46000000),
+(104, 313, 'LC-60UA6800', 1, 40000000),
+(105, 314, '49UM7400PTA', 1, 12300000),
+(106, 315, '49N5500', 1, 9100000),
+(107, 316, '50UM7600PTA', 1, 10100000),
+(108, 316, '49UM7400PTA', 1, 12300000),
+(109, 317, '43Q65T', 1, 14300000),
+(110, 318, '49N5500', 1, 9100000),
+(111, 319, '55Q70TAK', 1, 33000000),
+(112, 319, '55C8PTA', 1, 23500000),
+(113, 320, 'KD-55A8H', 1, 19000000),
+(114, 320, 'LC-40SA5500X', 1, 14000000),
+(115, 320, '43Q65T', 1, 14300000);
 
 -- --------------------------------------------------------
 
@@ -65,7 +100,30 @@ CREATE TABLE `donhang` (
 --
 
 INSERT INTO `donhang` (`madonhang`, `tenkhachhang`, `sodienthoai`, `email`, `diachi`, `ngaytao`, `ngaythanhtoan`, `trangthai`) VALUES
-(297, 'Nguyễn Quốc Cường', '0917273712', 'cuong@gmail.com', 'Quảng Bình', '2020-12-21 15:41:42', NULL, 1);
+(297, 'Nguyễn Quốc Cường', '0917273712', 'cuong@gmail.com', 'Quảng Bình', '2020-12-21 15:41:42', NULL, 1),
+(298, 'Phan Thị Hoài Thu', '0917273944', 'thu@gmail.com', 'Sóc Trăng', '2020-12-24 15:26:00', NULL, 1),
+(299, 'Nguyễn Văn Sơn', '0916883899', 'son@gmail.com', 'Phú Thọ', '2020-12-24 15:26:43', NULL, 1),
+(300, 'Nguyễn Khánh Phong', '0917256622', 'phong@gmail.com', 'Hà Tĩnh', '2020-12-24 15:27:30', NULL, 1),
+(301, 'Trần Hoàng Ái Nhi', '0978837789', 'nhi@gmail.com', 'Phú Thọ', '2020-12-24 15:28:19', '2020-12-24 15:32:11', 1),
+(302, 'Nguyễn Thị Hằng', '0919299399', 'hang@gmail.com', 'Hà nội', '2020-12-26 08:56:55', NULL, 1),
+(303, 'Phan Thanh Hùng', '0966253867', 'hung@gmail.com', 'Nam Định', '2020-12-26 08:57:54', '2020-12-26 08:59:28', 1),
+(304, 'Hoàng Thị Huyền', '0917278888', 'huyen@gmail.com', 'Nam Định', '2020-12-26 08:58:52', NULL, 1),
+(305, 'Nguyễn ngọc Hùng', '0972737899', 'hung@gmail.com', 'Nghệ An\r\n', '2020-12-29 16:05:40', '2020-12-29 16:10:58', 1),
+(306, 'Hoàng Thị Nguyệt', '0999239333', 'nguyet@gmail.com', 'Hà Nội', '2020-12-29 16:06:28', '2021-01-01 05:29:02', 1),
+(307, 'Ngô Thanh Sơn', '0900787678', 'son@gmail.com', 'Sóc Trăng', '2020-12-29 16:07:14', '2020-12-31 14:11:15', 1),
+(308, 'Phan Thanh Long', '0967628378', 'long@gmail.com', 'Thái Bình', '2020-12-29 16:07:47', '2020-12-29 16:10:48', 1),
+(309, 'Ngô Thị Huyền', '0923489899', 'huyen@gmail.com', 'Hà Tĩnh', '2020-12-29 16:08:28', NULL, 1),
+(310, 'Nguyễn Văn Thái', '0972837999', 'thai@gmail.com', 'Thanh Hoá', '2020-12-30 14:26:49', NULL, 1),
+(311, 'Trần Tuấn Anh', '0968989000', 'anh@gmail.com', 'Quảng Bình', '2020-12-30 14:27:38', '2020-12-30 14:33:39', 1),
+(312, 'Nguyễn Quốc Linh', '0918209312', 'linh@gmail.com', 'Bến Tre', '2020-12-30 14:28:27', NULL, 1),
+(313, 'Nguyễn Công Cường', '0917299399', 'cuong@gmail.com', 'Hà Tĩnh', '2020-12-31 14:06:43', NULL, 1),
+(314, 'Trần Long Giang', '0982839400', 'giang@gmail.com', 'Long Giang', '2020-12-31 14:07:17', NULL, 1),
+(315, 'Hoàng Thái Bình', '0977283912', 'binh@gmail.com', 'Hà Nội', '2020-12-31 14:08:01', '2020-12-31 14:11:38', 1),
+(316, 'Phan Văn Kiên', '0972938909', 'kien@gmail.com', 'Bến Tre', '2020-12-31 14:08:39', NULL, 1),
+(317, 'Nhuyễn Thành Trung', '0977888999', 'trung@gmail.com', 'Quảng Bình', '2021-01-01 05:23:51', NULL, 1),
+(318, 'Trần Khánh Châu', '0967789889', 'chau@gmail.com', 'Quảng Nam', '2021-01-01 05:24:28', NULL, 1),
+(319, 'Lê Thanh Huyền', '0928367278', 'huyen@gmail.com', 'Hà Nội', '2021-01-01 05:25:44', NULL, 1),
+(320, 'Hoàng Văn Long', '0976678299', 'long@gmail.com', 'Bến Tre', '2021-01-01 05:29:32', '2021-01-01 05:29:49', 1);
 
 -- --------------------------------------------------------
 
@@ -118,7 +176,13 @@ INSERT INTO `phanhoi` (`id`, `tenkhachhang`, `sodienthoai`, `email`, `noidung`, 
 (11, 'Nguyễn Thanh Thuỳ', '0918278788', 'thuy@gmail.com', 'Sản phẩm chất lượng lại còn rẻ!', '2020-12-20 07:13:59'),
 (12, 'Trương Tuấn Anh', '0912374992', 'anh@gmail.com', 'Dịch vụ ổn định, tư vấn nhiệt tình.', '2020-12-20 07:14:36'),
 (13, 'Trần Mạnh Quang', '0912638823', 'quang@gmail.com', 'Cần thêm phương thc thanh toán trực tuyến.', '2020-12-20 07:15:12'),
-(14, 'Hoàng Bảo Nhi', '0918273617', 'nhi@gmail.com', 'Giao hàng nhanh, chất lượng cần phải qua thời gian kiểm chứng.', '2020-12-20 07:16:05');
+(14, 'Hoàng Bảo Nhi', '0918273617', 'nhi@gmail.com', 'Giao hàng nhanh, chất lượng cần phải qua thời gian kiểm chứng.', '2020-12-20 07:16:05'),
+(15, 'Hoàng Bảo Nhi', '0988299399', 'nhi@gmail.com', 'Cửa hàng chuyên nghiệp lắm ạ', '2020-12-29 16:09:02'),
+(16, 'Lê Thái Bình', '0917727777', 'binh@gmail.com', 'Sản phẩm tốt chất lượng cao.', '2020-12-29 16:09:33'),
+(17, 'Phan Thanh Huy', '0912777388', 'huy@gmail.com', 'Tivi siêu nét, giá cả phải chăng.', '2020-12-29 16:10:05'),
+(18, 'Nguyễn Văn Vũ', '0977277388', 'vu@gmail.com', 'Cửa hàng chất lượng', '2020-12-30 14:24:52'),
+(19, 'Trần Văn Chính', '0978678789', 'chinh@gmail.com', 'Tôi rất hài lòng về sản phẩm', '2020-12-31 14:09:16'),
+(20, 'Ngô Thị Huyền', '0935467789', 'huyen@gmail.com', 'Cửa hàng uy tín lắm ạ!', '2020-12-31 14:09:51');
 
 -- --------------------------------------------------------
 
@@ -143,11 +207,11 @@ CREATE TABLE `sanpham` (
 INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `manhanhieu`, `giatien`, `mota`, `avatar`, `ngaytao`) VALUES
 ('43LK5000', 'LG 43 Inch Full HD 43LK5000', 20, 5700000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Kích thước không chân/treo tường: Dài: 97cm – Rộng: 6.68cm – Cao: 56,9cm</li></ul>', 'c9e13ef80e36cd6242214209106e20cd.png', '2020-12-05 13:59:10'),
 ('43LM5700', 'LG 43 inch 43LM5700', 20, 6300000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"font-weight: 700;\"><a href=\"https://thegioidienmayonline.com/smart-tivi-lg-43-inch-43lm5700/\" style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(51, 102, 255);\">Smart Tivi LG 43 inch 43LM5700PTC</span></a></span> có thiết kế viền mỏng và phong cách, tạo nên sự hài hòa với nội thất của bạn để tạo ra một trải nghiệm xem tốt hơn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Tivi LG 43 inch phù hợp với các không gian vừa và nhỏ như phòng khách, phòng ngủ,…</p>', '4a1d58ae7792accbfe2eab4b0d3cbaf5.jpg', '2020-12-05 14:07:00'),
-('43Q65T', 'Samsung 43Q65T 43 inch Smart TV', 21, 14300000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Mở ra kỷ nguyên chất lượng hình ảnh chân thực bạn chưa từng thấy. Trên một khung hình sống động, từng chi tiết nhỏ nhất được tái tạo tỉ mỉ đến khó tin, kết hợp với độ phân giải đỉnh cao, QLED 4K Q65T như bao trùm mọi giác quan, biến từng thước phim trở nên chân thật như chính bạn đang chứng kiến.</span></p>', 'a551782063f8bf89d3e89bbec4c6fbb1.jpg', '2020-12-05 14:55:39'),
+('43Q65T', 'Samsung 43Q65T 43 inch', 21, 14300000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Mở ra kỷ nguyên chất lượng hình ảnh chân thực bạn chưa từng thấy. Trên một khung hình sống động, từng chi tiết nhỏ nhất được tái tạo tỉ mỉ đến khó tin, kết hợp với độ phân giải đỉnh cao, QLED 4K Q65T như bao trùm mọi giác quan, biến từng thước phim trở nên chân thật như chính bạn đang chứng kiến.</span></p>', 'a551782063f8bf89d3e89bbec4c6fbb1.jpg', '2020-12-05 14:55:39'),
 ('43UM7400PTA', 'LG 4K 43 inch 43UM7400PTA', 20, 8000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(51, 102, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-lg-4k-43-inch-43um7400pta/\" style=\"color: rgb(51, 102, 255);\">Smart Tivi LG 4K 43 inch 43UM7400PTA</a> </span>sở hữu thiết kế tối giản đi kèm chân đế hình chữ V thanh mảnh nhưng không kém phần vững chãi, giúp tivi LG trụ vững trên mọi không gian đặt.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Tivi LG 43 inch phù hợp với các không gian vừa và nhỏ như phòng khách, phòng ngủ,…</p>', 'd278263c59703d52df01107900c87123.jpg', '2020-12-05 14:02:40'),
 ('49N5500', 'Samsung 49 inch 49N5500', 21, 9100000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Trải nghiệm hình ảnh với chiều sâu ấn tượng. Công nghệ Tương Phản Tự Động (Contrast Enhancer) phủ nhiều lớp sáng tối lên toàn bộ màn hình mang đến cảm giác choáng ngợp trước những thước phim hùng vĩ.</span></p>', '4dfc0235480e4085ed8821b64b426827.jpg', '2020-11-28 08:33:25'),
-('49NANO81TNA', 'NanoCell LG 4K 49 inch 49NANO81TNA', 20, 46000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Smart Tivi LG 4K 49 inch 49NANO81TNA sở hữu thiết kế đơn giản, thanh mảnh cùng chân đế hình bán nguyệt làm nổi bật nét độc đáo riêng của tivi. Sự kết hợp hài hòa của tổng thể tạo nên nét thanh lịch cho cả không gian của bạn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Kích thước màn hình tivi LG 49 inch phù hợp với phòng khách, phòng ngủ,… vừa giải trí cũng vừa là vật trang trí ấn tượng</p>', 'c1ca7eebce716d3c6e07b28a9772d96e.jpg', '2020-12-05 14:57:12'),
-('49UM7400PTA', 'LG 4K 49 inch 49UM7400PTA', 20, 11300000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Bluetooth: Có (kết nối loa bluetooth)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Kết nối Internet: Cổng LAN, Wifi</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng AV: Có cổng Composite và cổng Component</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng HDMI: 3 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng xuất âm thanh: Cổng Optical (Digital Audio Out), HDMI ARC</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">USB: 2 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li></ul>', 'e7d1adaccd2ec2fc39b4d91dda6526e7.jpg', '2020-12-05 14:14:17'),
+('49NANO81TNA', 'NanoCell LG 49NANO81TNA', 20, 46000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Smart Tivi LG 4K 49 inch 49NANO81TNA sở hữu thiết kế đơn giản, thanh mảnh cùng chân đế hình bán nguyệt làm nổi bật nét độc đáo riêng của tivi. Sự kết hợp hài hòa của tổng thể tạo nên nét thanh lịch cho cả không gian của bạn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Kích thước màn hình tivi LG 49 inch phù hợp với phòng khách, phòng ngủ,… vừa giải trí cũng vừa là vật trang trí ấn tượng</p>', 'c1ca7eebce716d3c6e07b28a9772d96e.jpg', '2020-12-05 14:57:12'),
+('49UM7400PTA', 'LG 4K 49 inch 49UM7400PTA', 20, 12300000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Bluetooth: Có (kết nối loa bluetooth)</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Kết nối Internet: Cổng LAN, Wifi</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng AV: Có cổng Composite và cổng Component</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng HDMI: 3 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng xuất âm thanh: Cổng Optical (Digital Audio Out), HDMI ARC</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">USB: 2 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tích hợp đầu thu kỹ thuật số: DVB-C, DVB-T2, DVB-T2C</li></ul>', 'e7d1adaccd2ec2fc39b4d91dda6526e7.jpg', '2020-12-05 14:14:17'),
 ('50UM7600PTA', 'LG 4K 50 inch 50UM7600PTA', 20, 10100000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 500px; float: left; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Độ phân giải 4K sắc nét gấp 4 lần Full HD.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Công nghệ 4K Active HDR tăng cường độ tương phản.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Công nghệ True Color Accuracy cho màu sắc chính xác.</li><li style=\"font-size: 13px; line-height: 22px; background: url(\"../../../../../../themes/dienmayonline/images/icon_dot.png\") left top 8px no-repeat; padding-left: 13px;\">Chip xử lý Quad Core hoàn thiện chất lượng hình ảnh.</li></ul><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"> </p>', '2d5570425e180146ecdea48df67e0963.jpg', '2020-12-05 14:13:07'),
 ('55B6T', 'OLED LG 55 inch 55B6T', 20, 21000000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Với thiết kế siêu mỏng Blade Slim (do không có đèn nền phía sau), </span><span style=\"font-weight: 700; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-oled-lg-55-inch-55b6t/\" style=\"color: rgb(0, 0, 255);\">Tivi OLED LG 55B6T</a></span></span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> chắc chắn sẽ là điểm nhấn đắt giá trong việc trang trí ngôi nhà bạn dù là khi treo tường hay để bàn</span></p>', 'f274d450dba86688b40b097ac4556ddc.jpg', '2020-12-05 13:57:38'),
 ('55C8PTA', 'OLED LG 4K 55 inch 55C8PTA', 20, 23500000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/smart-tivi-oled-lg-4k-55-inch-55c8pta/\" style=\"color: rgb(0, 0, 255);\">Smart Tivi OLED LG 4K 55 inch 55C8PTA</a></span> với thiết kế không viền sang trọng hòa quyện hoàn hảo với mọi không gian. <span style=\"font-weight: 700;\">Tivi OLED LG</span> tựa như một kiệt tác nghệ thuật, tạo điểm nhấn đẳng cấp cho căn phòng.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Màn hình tivi lớn 55 inch phù hợp với những gian phòng rộng như phòng khách, phòng họp ở công ty,… hoặc với những gia chủ thích xem tivi trên màn hình lớn.</p>', 'ae3e0f6cbf288935a34a2e7fea5d24de.jpg', '2020-12-05 14:01:30'),
@@ -177,7 +241,7 @@ INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `manhanhieu`, `giatien`, `mota
 ('KDL-32R300D', 'LED Sony 32 inch KDL-32R300D', 19, 4900000, '<p><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Tivi Sony 32R300D</span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> đã thiết kế cho chiếc tivi này có tính năng hoàn thiện hình ảnh, nhằm giảm thiểu hiện tượng nhiễu, mờ để đem đến cho người xem những khung hình thực tế nhất.</span></p>', 'd74471fa9fa622e441084c1adbd4d11a.jpg', '2020-12-05 14:17:42'),
 ('KDL-32R300E', 'LED Sony 32 inch KDL-32R300E', 19, 4900000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Chiếc <span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/tu-khoa/tivi-sony-32-inch\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"color: rgb(0, 0, 255);\">tivi Sony 32 inch</a></span> này với độ phân giải 1366 x 768 pixels chuẩn HD mang đến cho người xem những thước phim sống động sắc nét và cực kỳ sống động và chân thực</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Bên cạnh đó công nghệ Clear Resolution Enhancer tân tiến kết hợp cùng với độ nét chuẩn HD mang đến cho chiếc Tivi LED Sony 32 inch KDL-32R300E màu sắc tự nhiên và gần gũi.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> </p>', '6735b96635f60cae33c700814c25b672.jpg', '2020-12-05 14:19:46'),
 ('LC-32LE280', 'Sharp 32 Inch LC-32LE280', 18, 41000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">TIVI SHARP 32 INCH LC-32LE280X sở hữu tấm nền <a href=\"https://thegioidienmayonline.com/tu-khoa/tivi-full-hd/\" style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 255);\">Full HD</span></a> từ Nhật Bản (1,920 x 1,080 điểm ảnh) cho phép hiển thị hình ảnh độ nét cực cao. Góc nhìn rộng 176º theo cả chiều ngang và chiều dọc. Tivi Sharp sử dụng đèn nền <a href=\"https://thegioidienmayonline.com/tu-khoa/tivi-led/\" style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 255);\">LED</span></a> tăng độ trực tiếp độ sáng cho màn hình. <span style=\"font-weight: 700;\"> </span>tích hợp chức năng giảm nhiễu Analogue và tăng cường tín hiệu Ăng-ten giúp hình ảnh rõ nét hơn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> </p>', '590d0348fd9f6cee7167e533f1c714ce.jpg', '2020-12-05 14:40:29'),
-('LC-32LE375X', 'SHARP 32 Inch LC-32LE375X', 18, 9000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">TV SHARP được chứng minh hoạt động an toàn và độ bền cao trong những hoàn cảnh khác nhau. Giờ đây bạn có thể tận hưởng trải nghiệm hình ảnh tuyệt vời từ chiếc TV chất lượng tuyệt hảo được bảo vệ bởi 7 tính năng an toàn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> </p>', 'a3f9403fba6b621af5bfc9352d68ba5e.jpg', '2020-12-05 14:44:32'),
+('LC-32LE375X', 'SHARP 32 Inch LC-32LE375X', 18, 10000000, '<p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">TV SHARP được chứng minh hoạt động an toàn và độ bền cao trong những hoàn cảnh khác nhau. Giờ đây bạn có thể tận hưởng trải nghiệm hình ảnh tuyệt vời từ chiếc TV chất lượng tuyệt hảo được bảo vệ bởi 7 tính năng an toàn.</p><p style=\"margin-bottom: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> </p>', 'a3f9403fba6b621af5bfc9352d68ba5e.jpg', '2020-12-05 14:44:32'),
 ('LC-40LE280X', 'Sharp 40 inch LC-40LE280X', 18, 24000000, '<p><span style=\"font-weight: 700; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><a href=\"https://thegioidienmayonline.com/tivi-led-sharp-40-inch-lc-40le280x/\" style=\"color: rgb(0, 0, 0);\"><span style=\"color: rgb(0, 0, 255);\">TV Sharp 40 inch 40LE280X</span></a> </span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> với màn hình rộng </span><a href=\"https://thegioidienmayonline.com/tu-khoa/tivi-sharp-40-inch/\" style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 400; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><span style=\"font-weight: 700;\">40 inch</span></span></a><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">, độ phân giải lớn cung cấp cho người xem những hình ảnh hấp dẫn. Ngoài ra, đây cũng là một trong những sản phẩm của hãng được tích hợp công nghệ giảm nhiễu Analogue, tăng khả năng nhận tín hiệu của ăng-ten duy trì hình ảnh rõ nét.</span></p>', 'ddb3b32f0d30ef50c310d5f65381b28c.jpg', '2020-12-05 14:41:27'),
 ('LC-40SA5500X', 'Sharp 40 inch LC-40SA5500X', 18, 14000000, '<ul style=\"margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px; list-style: none; width: 600px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px;\"><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Kết nối Internet: Cổng LAN, Wifi</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng HDMI: 2 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Cổng AV:Có cổng Composite và cổng Component</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Cổng xuất âm thanh: Jack loa 3.5 mm</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">USB: 1 cổng</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px;\">Tích hợp đầu thu kỹ thuật số: DVB-T2</li><li style=\"width: 600px; float: left; margin: 0px; padding: 10px 0px 10px 10px; background: rgb(241, 241, 241);\">Tính năng thông minh (Cập nhật 05/2018)</li></ul>', '911d2ff7c2800da67cc9461d6bc15fca.jpg', '2020-12-05 14:46:40'),
 ('LC-50LE275X', 'Led Sharp LC-50LE275X Full HD', 18, 26900000, '<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\">Tấm nền Full HD từ Nhật Bản (1,920 x 1,080 điểm ảnh) </span><span style=\"font-weight: 700; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"><span style=\"color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/tivi-led-sharp-lc-50le275x-full-hd/\" style=\"color: rgb(0, 0, 255);\">Tivi Sharp LC-50LE275X</a></span></span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> cho phép hiển thị hình ảnh độ nét cực cao. Đèn nền LED trực tiếp tăng độ sáng cho màn hình. Hơn thế nữa </span><span style=\"font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify; color: rgb(0, 0, 255);\"><a href=\"https://thegioidienmayonline.com/tivi-sharp/\" style=\"color: rgb(0, 0, 255);\">Tivi Led Sharp</a></span><span style=\"color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 14px; text-align: justify;\"> LC-50LE275X Full HD còn tích hợp chức năng giảm nhiễu Analogue và tăng cường tín hiệu Ăng-ten giúp hình ảnh rõ nét hơn.</span></p>', '3af799077dcfacebb49e26316e1937b7.jpg', '2020-12-05 14:39:47'),
@@ -349,25 +413,25 @@ ALTER TABLE `trangthai`
 -- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=298;
+  MODIFY `madonhang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=321;
 
 --
 -- AUTO_INCREMENT cho bảng `nhanhieu`
 --
 ALTER TABLE `nhanhieu`
-  MODIFY `manhanhieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `manhanhieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT cho bảng `phanhoi`
 --
 ALTER TABLE `phanhoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

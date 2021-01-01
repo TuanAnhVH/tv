@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mt-5">
+	<div class="mt-5 ml-4">
 	 <?php 
 	 	if(!empty($lst_all))
 		 if(count($lst_all)>10) echo $paging_html; 
