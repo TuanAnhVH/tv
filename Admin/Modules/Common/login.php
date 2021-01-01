@@ -45,11 +45,19 @@
      {
          $user_info = $user->db_get_taikhoan_by_id($username);
             
-           if(!empty($user_info)&&$user_info['matkhau'] == md5($password))
+           if(empty($user_info))
            {       
-            $user->r->set_logged($user_info['tendangnhap']);
-            $user->h->redirect($user->h->get_url('tv/admin/?m=common&a=admin'));
-           }        
+              $errors['tendangnhap']="Tên đăng nhập không tồn tại!";
+           }
+           else if($user_info['matkhau'] != md5($password))
+           {
+              $errors['matkhau']="Mật khẩu không đúng!";
+           }
+           else
+           {
+              $user->r->set_logged($user_info['tendangnhap']);
+              $user->h->redirect($user->h->get_url('tv/admin/?m=common&a=admin'));
+           }
      }
   }
 ?>
@@ -72,11 +80,15 @@
                         <div class="form-group row">     
                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                               <input type="text" class="form-control" name="txtusername" placeholder="Tên đăng nhập" value="<?php  ?>">
-                              <?php ?>
+                              <?php if(!empty($errors['tendangnhap']))
+                                 echo '<span style="border:none" class="text-warning">'.$errors['tendangnhap']. '</span>'; 
+                              ?>
                            </div>
                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-5">
                               <input type="password" class="form-control" name="txtpasword" placeholder="Mật khẩu">
-                              <?php ?>
+                              <?php if(!empty($errors['matkhau']))
+                                 echo '<span style="border:none" class="text-warning">'.$errors['matkhau']. '</span>'; 
+                              ?>
                            </div>
                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 text-right mt-4 mb-3">
                                <a href="#" class="text-white " style="text-decoration: none;">Quên mật khẩu?</a</p>
